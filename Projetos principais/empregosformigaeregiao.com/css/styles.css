@@ -1,0 +1,493 @@
+/* Classes globais *************************/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    height: 100%;
+}
+
+/* fim das classes globais ******************/
+
+/* classe para padronizar o escopo do meu site*/
+
+.center{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2%;
+    color: white;
+}
+
+/* fim classe para padronizar o escopo do meu site*/
+
+/* algumas partes ainda precisam usar o float então por isso dessa classes */
+
+.clear{clear: both;}
+
+/* fim da classe para float*/
+
+/* estilização do cabeçalho do site*/
+
+header{
+    background: rgb(23, 192, 235);   
+
+}
+
+.principal {
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+}
+
+.principal-alt {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+
+}
+
+.cidades{
+    background-color:  rgb(24, 220, 255);
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+
+.cidade-wraper{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.cidade-wraper a{
+    color: white;
+    background: rgb(23, 192, 235);
+    padding: 10px 8px;
+    text-align: center;
+    width: 100%;
+     
+}
+/*
+header > .center{
+    display: flex;
+    justify-content: space-between;
+
+}*/
+
+
+.logo{
+    color: white;
+    font-size: 41px;
+    cursor: pointer;
+    
+    height: 100%;
+    white-space: nowrap;
+    padding: 25px 0;
+  
+}
+
+.cidade-wraper a:hover{
+    background-color: rgb(24, 220, 255);
+    cursor: pointer;
+   
+    
+}
+
+/* fim estilização do cabeçalho do site*/
+
+/* tela de login*/
+
+
+.form-login{
+    border: 1px solid  rgb(24, 220, 255);
+    padding: 5px;
+    width: 200px;
+    height: 250px;
+    background: rgb(23, 192, 235);    
+   
+       
+}
+
+.form-element{
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+    
+}
+
+.form-element p{
+    color: white;
+    font-size: 15px;
+    
+    text-align: left;
+    padding: 5px;
+    
+}
+
+
+
+.form-element a{
+    border-top:1px;
+    color: white;
+    text-decoration: none;
+    cursor: initial;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: -6px;
+    
+    
+    
+}
+
+.form-element b{
+    text-align: center;
+    cursor: pointer;
+    
+    font-size: 20px;
+    font-weight: normal;
+    text-decoration: underline;
+    padding: 5px;
+    
+}
+
+
+
+.form-element input[type=email]{
+    border: 3px solid white;
+}
+
+.form-element input[type=password]{
+    border: 3px solid white;
+}
+/*
+.form-element input[type=email]:active{
+    border-style: none;
+    border: 2px solid white;
+}
+
+.form-element input[type=password]:active{
+    border-style: none;
+    border: 2px solid white;
+}*/
+
+.form-element input[type=submit]{
+    font-size: 20px;
+    background-color: rgb(23, 192, 235);
+    border: 1px solid white;
+    color: white;
+}
+
+.form-element input[type=submit]:hover{
+    background-color: rgb(24, 220, 255);
+    cursor: pointer;
+   
+    
+}
+
+
+
+/* fim da tela de login*/
+
+
+
+
+section.texto-chamada{
+    background: rgb(24, 220, 255);
+    padding: 10px 0;
+    text-align: center;
+}
+
+section.texto-chamada i{
+    font-size: 50px;
+}
+
+section.texto-chamda h2, 
+section.texto-chamada h3{
+    color: white;
+    font-weight: normal;
+}
+
+section.texto-chamada b {
+    color: rgb(255, 56, 56)
+}
+
+section.vagas{
+    padding: 10px 0;
+    
+}
+
+section.vagas h2,p{
+    color: black;
+    text-align: center;
+    padding:0 8px;
+    font-weight: normal;
+    
+}
+
+section.vagas > .center{
+    display:  flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+    
+    
+    padding: 15px;
+}
+
+.vaga-wraper{
+    color: black;
+    width: 32%;
+    padding: 25px;
+}
+
+.box-single{
+    border: 1px solid #ccc;
+    height: 100%;
+    color: black;
+    
+}
+
+.box-single h2,p{
+    
+    color: black;
+    
+}
+
+
+.box-single img{
+    max-width: 100%;
+
+}
+
+.vaga-wraper a{
+    color: white;
+    background:rgb(23, 192, 235);
+    padding: 10px 8px;
+    text-align: center;
+    display: block;
+    width: 100%;
+   
+}
+
+.vaga-wraper a:hover{
+    background:rgb(24, 220, 255);
+    
+   
+}
+
+.w50{
+    float: left;
+    width: 50%;
+    padding: 0 15px;
+    
+}
+
+section.novidades{
+    padding: 30px 0;
+}
+
+.w50 h1{
+    font-size: 23px;
+    font-weight: normal;
+    color: red;
+    margin-bottom: 10px;
+   
+
+}
+
+.box-single-noticia h2{
+    font-size: 21px;
+    font-weight: bold;
+    color: black;
+}
+
+.box-single-noticia p{
+    font-size: 16px;
+    font-weight: normal;
+    color: black;
+
+
+}
+
+.box-single-noticia{
+    padding: 20px 0;
+    border-bottom: 1px dotted #ccc;
+    
+}
+
+.depoimentos ul{
+    list-style-position: inside;
+
+}
+
+.depoimentos li{
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: black;
+}
+
+footer{
+    background: rgb(23, 192, 235);
+    color: white;
+    padding: 20px 0;
+}
+
+footer p{
+    color: white;
+}
+
+.direitos{
+    padding: 20px 15px;
+    margin-bottom: auto;
+}
+
+
+.formulario{
+    border: 2px solid black;
+    padding: 10px;
+	max-width: 700px;
+	margin:30px auto;
+}
+
+.formulario input[type=text]{
+	width: 100%;
+	height: 40px;
+	border: 1px solid black;
+	margin:10px 0;
+	padding-left: 10px;
+}
+
+.formulario input[type=email]{
+	width: 100%;
+	height: 40px;
+	border: 1px solid #ccc;
+	margin:10px 0;
+	padding-left: 10px;
+}
+
+
+.formulario input[type=password]{
+	width: 100%;
+	height: 40px;
+	border: 1px solid #ccc;
+	margin:10px 0;
+	padding-left: 10px;
+}
+
+
+
+.formulario input[type=submit]{
+	background-color: rgb(24, 220, 255);
+	cursor: pointer;
+	color: white;
+	padding: 10px 15px;
+	border:0;
+	width: 100%;
+}
+
+.formulario input[type=textarea]{
+	border: 1px solid black;
+	padding: 10px;
+    width:  100%;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.formulario select{
+	
+    width:  100%;
+    height: 30px;
+    margin: 15px auto;
+
+}
+
+div.msg-sucesso{
+    width: 420px;
+    margin: 10px auto;
+    background-color: green;
+    border: 1px solid black;
+}
+
+div.msg-erro{
+    width: 420px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: red;
+    
+}
+
+label,
+textarea {
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+textarea {
+    padding: 10px;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 300px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px){
+
+    .vaga-wraper{
+        width: 100%;
+        padding: 5px;
+        max-width: 500px;
+        margin: 30px auto;
+    }
+
+    section.vagas > .center{
+        display:  flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 5px;
+    }
+
+
+    .w50{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+        
+    }
+
+}
+
+

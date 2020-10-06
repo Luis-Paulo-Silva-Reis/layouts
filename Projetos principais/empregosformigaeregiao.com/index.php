@@ -1,0 +1,309 @@
+<?php
+    require_once 'classes/usuarios.php';
+    $u = new Usuario;
+    $u->conectar("login","root","");
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empregos Formiga e região</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    
+
+</head>
+<body>
+
+    <header class="principal">
+        
+           <h1 class="logo"> Empregos Formiga e região </h1>
+            
+            <form method="POST" class="form-login">
+                <div class="form-element">
+                    <p>Email</p>
+                    <input type="email" name="email" placeholder="Digite seu email !" required>
+                </div>
+                
+                <div class="form-element">
+                    <p>Senha</p>
+                    <input type="password" name="senha" placeholder="Digite sua senha !" required>
+                </div>
+                
+                <br>
+
+                <div class="form-element">
+                    <input type="submit"  value="Entrar">
+                </div>
+
+                <div class="form-element" >
+                    <a href="#">Não tem uma conta? </a>
+                   <a href="cadastro.php"><b>Cadastre-se</b></a> 
+                </div>
+
+            </form>
+
+            <?php
+                    if(isset($_POST['email']))
+                {
+
+                        $email = addslashes($_POST['email']);
+                        $senha = addslashes($_POST['senha']);
+                    
+                    if( !empty($email) && !empty($senha)){
+                        
+                            if($u->logar($email,$senha)){
+                                
+                                header("location: tela-login.php");
+                            }else{
+                                
+                                echo "<script>window.alert('login ou senha incorretos, por favor verifique')</script>";
+
+                            }
+                            
+                        
+                        }
+                        else{
+                            echo 'Prencha todos os campos';
+                        }
+                    
+                }
+            ?>
+
+
+    </header>
+    
+  
+    
+    <header class="cidades">
+        
+            
+            <div class="cidade-wraper">
+                
+                <a href="#">Formiga</a>
+            </div>
+
+            
+            <div class="cidade-wraper">
+               
+                <a href="#">Arcos</a>
+
+            </div>
+            
+            <div class="cidade-wraper">
+                
+                <a href="#">Iguatama</a>
+            
+            </div>
+
+            <div class="cidade-wraper">
+                
+                <a href="#">Bambuí</a>
+            
+            </div>
+
+            <div class="cidade-wraper">
+                
+                <a href="#">Medeiros</a>
+            
+            </div>
+
+            <div class="cidade-wraper">
+                
+                <a href="#">Pains</a>
+            
+            </div>
+
+            <div class="cidade-wraper">
+                
+                <a href="#">Piumhi</a>
+            
+            </div>
+
+            <div class="cidade-wraper">
+                
+                <a  href="#">Lagoa da prata</a>
+            
+            </div>
+
+            
+
+            
+            
+
+            
+  
+
+    </header>
+
+    <section class="texto-chamada">
+        <div class="center">
+            <i class="fa fa-crosshairs" aria-hidden="true"></i>
+            <h2>conheça nossas <b> vagas !</b></h2>
+            <h3>O lugar certo para encontrar um bom emprego</h3>
+        </div><!--center-->
+    </section><!--texto-chamada-->
+
+    <section class="vagas">
+        <div class="center">
+
+
+            <div class="vaga-wraper">
+                <div class="box-single">
+                    <img src="img/vagasem.jpg">
+                    <h2></h2>
+                    <p>Aqui se encontra a descrição da vaga desejada</p>
+                </div><!--box-single-->    
+                <a href="#">Veja a vaga</a>
+            </div>
+
+            <div class="vaga-wraper">
+                <div class="box-single">
+                    <img src="img/vagasem.jpg">
+                    <h2></h2>
+                    <p>Aqui se encontra a descrição da vaga desejada</p>
+                </div><!--box-single-->    
+                <a href="#">Veja a vaga</a>
+            </div>
+
+            <div class="vaga-wraper">
+                <div class="box-single">
+                    <img src="img/vagasem.jpg">
+                    <h2></h2>
+                    <p>Aqui se encontra a descrição da vaga desejada</p>
+                </div><!--box-single-->    
+                <a href="#">Veja a vaga</a>
+            </div>
+
+            <div class="vaga-wraper">
+                <div class="box-single">
+                    <img src="img/vagasem.jpg">
+                    <h2></h2>
+                    <p>Aqui se encontra a descrição da vaga desejada</p>
+                </div><!--box-single-->    
+                <a href="#">Veja a vaga</a>
+            </div>
+
+            <div class="vaga-wraper">
+                <div class="box-single">
+                    <img src="img/vagasem.jpg">
+                    <h2></h2>
+                    <p>Aqui se encontra a descrição da vaga desejada</p>
+                </div><!--box-single-->    
+                <a href="#">Veja a vaga</a>
+            </div>
+
+            <div class="vaga-wraper">
+                <div class="box-single">
+                    <img src="img/vagasem.jpg">
+                    <h2></h2>
+                    <p>Aqui se encontra a descrição da vaga desejada</p>
+                </div><!--box-single-->    
+                <a href="#">Veja a vaga</a>
+            </div>
+
+            <div class="vaga-wraper">
+                <div class="box-single">
+                    <img src="img/vagasem.jpg">
+                    <h2></h2>
+                    <p>Aqui se encontra a descrição da vaga desejada</p>
+                </div><!--box-single-->    
+                <a href="#">Veja a vaga</a>
+            </div>
+
+            <div class="vaga-wraper">
+                <div class="box-single">
+                    <img src="img/vagasem.jpg">
+                    <h2></h2>
+                    <p>Aqui se encontra a descrição da vaga desejada</p>
+                </div><!--box-single-->    
+                <a href="#">Veja a vaga</a>
+            </div>
+
+            <div class="vaga-wraper">
+                <div class="box-single">
+                    <img src="img/vagasem.jpg">
+                    <h2></h2>
+                    <p>Aqui se encontra a descrição da vaga desejada</p>
+                </div><!--box-single-->    
+                <a href="#">Veja a vaga</a>
+            </div>
+        
+            
+        </div><!--center-->
+    </section><!--vagas-->
+
+    <section class="texto-chamada">
+        <div class="center">
+            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+            <h2>Ultimas novidades da <b> região !</b></h2>
+            <h3>Fique por dentro das ultimas noticias</h3>
+        </div><!--center-->
+    </section><!--texto-chamada-->
+
+    <section class="novidades">
+        <div class="center">
+            <div class="w50 noticias">
+                
+                <h2>Ultimas noticias</h2>
+
+                <div class="box-single-noticia">
+                    <h2>Nisi labore quis</h2>
+                        <p>Lorem tempor deserunt enim ipsum ex sit ea laboris proident sint do sit.</p>
+                </div><!--box-single-noticia-->
+
+                <div class="box-single-noticia">
+                    <h2>Nisi labore quis</h2>
+                        <p>Lorem tempor deserunt enim ipsum ex sit ea laboris proident sint do sit.</p>
+                </div><!--box-single-noticia-->
+
+                <div class="box-single-noticia">
+                    <h2>Nisi labore quis</h2>
+                        <p>Lorem tempor deserunt enim ipsum ex sit ea laboris proident sint do sit.</p>
+                </div><!--box-single-noticia-->
+
+            </div><!--w50-noticias-->
+
+            <div class="w50 depoimentos">
+
+                <h2>Ultimos depoimentos</h2>
+
+                <ul>
+                    <li>Que noticia interessante</li>
+                    <li>Que noticia interessante</li>
+                    <li>Que noticia interessante</li>
+                    <li>Que noticia interessante</li>
+                    <li>Que noticia interessante</li>
+                </ul>
+
+            </div>
+        
+    
+        <div class="clear"></div>
+        </div><!--center-->
+    </section><!--novidades-->
+
+    <footer>
+        
+        <div class="center">
+            <div class="w50">
+            <p>Email lpreis2010@gmail.com</p>
+            <p>Celular 37 999922294</p>
+            </div>
+
+            <div class="w50">
+                <p class="direitos">Todos os direitos reservados</p>
+            </div>
+           
+            <div class="clear"></div>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>
+
